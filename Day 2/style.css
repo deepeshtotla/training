@@ -37,6 +37,7 @@ ul{
     border-style: solid;
     float: center;
     position: relative;
+    width: 100vh;
 }
 ul
 {
