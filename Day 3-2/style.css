@@ -3,6 +3,9 @@
     padding: 0%;
     margin: 0%;
 }
+body{
+    background-color:black;
+}
 h1
 {
 text-align: center;
@@ -17,13 +20,26 @@ header
   display: flex;  
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
+  float: left;
+  
 }
+
+.navi
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #art1
 {
     background-color: blueviolet;
     width: 100%;
     height: 85vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(./velo.jpg);
+    background-size: cover;
+    margin-bottom: 3%;
 }
 .sec1
 {
@@ -34,12 +50,13 @@ header
 {
     display: flex;
     background-color: blue;
-    border-radius: 50%;
-    height: 190px;
-    width: 190px;
+    border-radius: 10%;
+    height: 200px;
+    width: 240px;
     align-items: center;
     justify-content: center;
 }
+
 .sec2
 {
     display: flex;
@@ -47,9 +64,11 @@ header
 }
 main
 {
+    margin-left: 1%;
     width: 50%;
     height: 300px;
-    border-radius: 20%;
+    border: solid;
+    border-radius: 10%;
     background-color: aqua;
     margin-right: 2%;
     overflow: hidden;
@@ -64,8 +83,11 @@ aside
 }
 .div
 {
-  background-color: bisque;
+  background-color:yellowgreen;
   overflow: hidden;
+  border: solid;
+  margin: 2%;
+  height: 100px;
 }
 .sec3
 {
@@ -75,9 +97,13 @@ aside
 .dd
 {
     border-radius: 2%;
-    background-color: brown;
+    background-color: rgb(181, 235, 210);
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
     height: 200px;
     width: 20%
+    
 }
 footer
 {
