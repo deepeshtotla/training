@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, red,yellow);
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+            transform: 2s;
+
+        }
+        p{
+            font-family: Monospace;
+            font-size: 40px;
+        }
+        .box1{
+            height: 80px;
+            width: 80px;
+            border: 2px 5px solid;
+            background-image: linear-gradient(to right, black ,white 50%);
+            border-radius: 50%; 
+            animation: b1 2s linear infinite;
+            /* transform: translate(0,-50px);  */
+            
+        }
+        @keyframes b1 {
+            0%{
+                transform:translate(0) rotate(0deg);
+            }
+            50%{
+                transform:translate(250px,0) rotate(360deg) ;
+            }
+            100%{
+                transform:translate(0) rotate(720deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><p>Loading</p></div>
+        <div class="box1"></div>
+        
+
+    </div>
+</body>
+</html>
