@@ -10,7 +10,19 @@
     <script>
         var no1=Number(prompt("Enter First Number"));
         var no2=Number(prompt("Enter Second Number"));
-        document.body.innerHTML="<h1 style=color:blue> Addition: " + (no1+no2) + "</h1><br>";
+        var multi=no1*no2;
+        var sub,div;
+        if(no1>no2){
+            sub=no1-no2;
+            div=no1/no2;
+        }
+        else{
+              sub=no2-no1;
+              div=no2/no1;
+        }
+        document.body.innerHTML="<h1 style=color:blue> Addition: " + (no1+no2) + "</h1><br><h1 style=color:blue> Difference: " + sub + "</h1><br><h1 style=color:blue> Multiplication: " + multi + "</h1><br><h1 style=color:blue> Division: " + div + "</h1>";
+        
+
         
     </script>
 </body>
