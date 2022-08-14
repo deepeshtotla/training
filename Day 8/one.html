@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+<body>
+    <script>
+        let str=prompt("Enter the String: ");
+        str=str.trim();
+        let arr=str.split(" ");
+let st="";
+for(var j=0;j<arr.length;j++){
+    if(arr[j]!=""){st+=arr[j];
+        if(j!=(arr.length-1)){
+            st+=" ";
+            
+        }
+    }
+}
+document.body.innerHTML="<h1>The String is : " +st+"</h1>";
+
+    </script>
+</body>
+</html>
