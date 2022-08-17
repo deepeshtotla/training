@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        var flag=0;
+        var str=setInterval(fun,3000);
+       function fun(){
+        flag++;
+        document.write('<h1> Hii </h1><br>');
+        if(flag==5)clearInterval(str);
+       }
+    </script>
+</body>
+</html>

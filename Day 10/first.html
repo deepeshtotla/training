@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: aqua;
+            font-size:30px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <script>
+        
+       var person = {
+        details: function(city , state, country){
+            var name= this.fname + " " + this.lname;
+            return   "Name: "+name + "<br> City:  " + city + "<br>State: " + state+ "<br>Country: " + country; 
+        }
+
+       }
+
+       var obj = {
+        fname : prompt("Enter your First Name "),
+        lname : prompt("Enter your Last Name ") 
+       }
+var city=prompt("Enter your City ");
+var state=prompt("Enter your State ");
+var country=prompt("Enter your Country ");
+var arr=[city,state,country];
+//using call and apply
+        document.body.innerHTML="<h1> Using call<br>"+ person.details.call(obj,city,state,country) +"<br><br>Using apply<br>"+ person.details.apply(obj,arr) +"</h1>";
+    </script>
+</body>
+</html>
