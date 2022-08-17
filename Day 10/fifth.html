@@ -17,14 +17,14 @@
     <script>
         var people = [
   { name: "Ashish", age: 23 },
-  { name: "Ajay", age: 21 },
+  { name: "Ajay", age: 10 },
   { name: "Arvind", age: 26 },
   { name: "Mahesh", age: 28 },
   { name: "Jay", age: 19 }
 ];
 
 // var result=[];
-var result=people.filter((i)=>i.age<25).sort();
+var result=people.filter((i)=>i.age<25).sort(function(n1,n2){return n1.age - n2.age}).reverse();
 
 var result1=result.map((i)=>
                         document.write("<h1>Name : "+i.name +" , "+ "Age : "+ i.age +"<br></h>")
