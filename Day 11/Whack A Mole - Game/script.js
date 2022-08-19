@@ -33,7 +33,7 @@ function counter(){
 
 function rand(){
     
-    var random=Math.floor(Math.random()*6)+1;
+    var random=Math.floor(Math.random()*6);
     var y=random;
     mole[y].style.visibility = "visible";
     mole[y].onclick=counter;
