@@ -37,3 +37,59 @@
     color: white;
     background-color: skyblue;
   }
+
+
+
+
+
+  .todo-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    list-style: none;
+    min-width:25%;
+}
+.tododiv
+{
+    background-color: white;
+    font-size: 24px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+.tododiv li{
+    flex: 1;
+}
+.tododiv_check{
+    color: white;
+    background-color: teal;
+    border: none;
+    padding: 16px;
+    outline: none;
+    font-size: 16px;
+}
+.tododiv_end{
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 16px;
+    outline: none;
+    font-size: 16px;
+}
+.tododiv_item
+{
+    margin: 0px 10px;
+}
+
+.fa
+{
+    pointer-events: none;
+}
+.done{
+    text-decoration: line-through;
+    opacity: .5;
+}
