@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <button id="btn1" onclick="openWindow()">Window</button>
+    <script>
+        function openWindow()
+        {
+            //url 
+            var url = "../Day 13/index.html";//.. for outside the folder
+            var windowSize = "height=500px width=500px";
+            var newWindow=window.open(url,"_top",windowSize);// _top - open on the same window full size 
+            // "" if nothing we give the it will open in new window
+            //"About" -  give any name for the window to pop up
+            newWindow.moveTo(500,200);// to move window 500 from left and 200 from top 
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+ <!-- merge of animation and template -->
+
+ <!-- before body 
+ display = none;
+
+ event -> window.onLoad = function(){
+  setInterval(() => {
+    stopLoader();
+  },3000);    
+}
+ function stopLoader()
+ {
+document.querySelector(".").style.display = "none";
+document.getElementById("").style.display = "block";
+ }
+  -->
+
+<!-- location object
+// give info about-
+1- page location - window.location.href; //window use krro na kro voh apne aap call ho jayega (location.href)
+2- hostName    - window.location.hostname;
+3- protocol - window.location.protocol;
+
+
+to redirect from one page to another
+for redirection  -  location.assign("https://www.google.com"); -->
+
+
+
