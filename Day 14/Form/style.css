@@ -81,4 +81,7 @@ form .divs
 {
     margin-right: 5px;
 }
-
+#sub
+{
+    align-items: center;
+}
