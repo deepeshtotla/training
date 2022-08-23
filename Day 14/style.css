@@ -42,6 +42,11 @@
 
 
 
+  .todoContainer
+  {
+    height: 100vh;
+    display: none;
+  }
 
 
   .todo-container{
