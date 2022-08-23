@@ -1,0 +1,84 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: aqua;
+}
+
+h1{
+    color: black;
+    font-style: italic;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.info
+{
+    background-color: blueviolet;
+    height: 500px;
+    width: 800px;
+}
+form
+{
+    height: 450px;
+    width: 750px;
+    padding: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .divs
+{
+    width: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gender
+{
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: -300px; */
+}
+#radio1
+{
+    left: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.radio
+{    
+    width: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.sports
+{
+    /* width: 200px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: end;
+    flex-direction: column;
+    
+}
+.game
+{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-left: -164px;
+}
+.sports1
+{
+    margin-right: 5px;
+}
+
