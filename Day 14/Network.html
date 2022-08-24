@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Connectivity</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <center>
+    <h1>Connectivity</h1>
+    <h2 id="h2">Let's See</h2>
+    <!-- <span class="material-symbols-outlined">
+        Wifi
+        </span> -->
+    <script>
+        var h2=document.getElementById("h2");
+        function online()
+        {
+           h2.innerText="You are Online";
+        //    var on = document.querySelector("material-symbols-outlined");
+        }
+        function offline()
+        {
+           h2.innerText="You are Offline";
+        //    var off = document.querySelector("material-symbols-outlined");
+        }
+        window.onload = function() {
+          setInterval(()=>{
+            if(navigator.onLine)online();
+            else offline();
+          },500)
+        }
+    </script>
+    </center>
+</body>
+</html>
