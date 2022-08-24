@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <center>
+    <div id="container">
         <h1>FORM</h1>
         <br>
         <div class="info">
@@ -37,39 +37,39 @@
                 </div>
                 <div class="divs">
                     <div>
-                        <label for="sportss"> Sports:</label>
+                        <label for=""> Sports:</label>
                     </div>    
-                        <div class="sports" id="sportss">
+                        <div class="sports">
                             <div class="game">
-                                <input type="checkbox" name="sport" class="sports1">
-                                <label for="">Badminton</label> 
+                                <input type="checkbox" name="sport" class="sports1" id="s1">
+                                <label for="s1" class="labels" style="margin-right: 30%;">Badminton</label> 
+                            </div>
+                            <div class="game">
+                                <input type="checkbox" name="sport" class="sports1" id="s2">
+                                <label for="s2" class="labels" style="margin-right: 37%;">Football</label> 
                             </div>
                             <div class="game">
                                 <input type="checkbox" name="sport" class="sports1">
-                                <label for="">Football</label> 
+                                <label for="" class="labels" style="margin-right: 40%;">Cricket</label> 
                             </div>
                             <div class="game">
                                 <input type="checkbox" name="sport" class="sports1">
-                                <label for="">Cricket</label> 
+                                <label for="" class="labels" style="margin-right: 37%;">Kabbadi</label> 
                             </div>
                             <div class="game">
                                 <input type="checkbox" name="sport" class="sports1">
-                                <label for="">Kabbadi</label> 
-                            </div>
-                            <div class="game">
-                                <input type="checkbox" name="sport" class="sports1">
-                                <label for="">Kho-Kho</label> 
+                                <label for="" class="labels" style="margin-right: 35%;">Kho-Kho</label> 
                             </div>
                             
                         </div>
                 </div>
                 <div class="divs" id="sub">
-                        <input type="submit">
+                        <button id="b1">SUBMIT</button>
                 </div>
             </form>
 
         </div>
-    </center>
+    </div>
 </body>
 </html>
 
