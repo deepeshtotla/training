@@ -1,10 +1,9 @@
 window.onload= function(){ 
-    console.log("Hello World");
     setInterval(stopLoader,3000);    
     }
     function stopLoader()
     {
-        console.log("Hello World");
+        
     document.querySelector(".container").style.display="none";
     document.querySelector(".todoContainer").style.display="block";
     }
