@@ -1,113 +1,112 @@
-// selectors
+// selector
 var canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+var ctx = canvas.getContext("2d");
 
-// canvas.width = 200;
-// canvas.width = window.innerWidth;
+const image = document.getElementById("source");
 
+const player = {
+  w: 50,
+  h: 70,
+  x: 20,
+  y: 200,
+  speed: 5,
+  dx: 0,
+  dy: 0,
+};
 
-/*
-// Filled Rectangle
-ctx.fillStyle = "red";
-ctx.fillRect(20,20,100,100);
+function drawPlayer() {
+  ctx.drawImage(image, player.x, player.y, player.w, player.h);
+}
 
-
-
-// Stroke  Rectangle
-ctx.lineWidth = 5;
-ctx.strokeStyle = "blue";
-ctx.strokeRect(25, 50, 350, 100);
-
-
-
-// Rounded Rectangle
-ctx.fillStyle = "orange";
-ctx.roundRect(450, 50, 100, 100, [10]);
-ctx.fill();
-*/
-
-// clear Canvas
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-/*
-
-ctx.font = "30px Arial";
-ctx.fillStyle = "green";
-ctx.fillText("Hello World", 200, 200);
-
-ctx.lineWidth = 1;
-ctx.strokeStyle = "purple";
-ctx.strokeText("Hello World", 200, 300);
-
-function clearCanvas() {
+function clear() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-// Draw Triangle
-// Path
-ctx.beginPath();
-ctx.moveTo(50, 50);
-ctx.lineTo(150, 50);
-ctx.lineTo(100, 200);
-ctx.lineTo(50, 50);
-// ctx.closePath()
-ctx.fillStyle = "coral";
-// ctx.stroke();
-ctx.fill();
+function newPos() {
+  player.x += player.dx;
+  player.y += player.dy;
 
-// Stroke Triangle
-ctx.beginPath();
-ctx.moveTo(200, 50);
-ctx.lineTo(150, 200);
-ctx.lineTo(250, 200);
-ctx.closePath();
-ctx.stroke();
+  detectWalls();
+}
 
-// Filled Rectangle
-ctx.beginPath();
-ctx.rect(300, 50, 150, 100);
-ctx.fillStyle = "blue";
-ctx.fill();
+function detectWalls() {
+  // Left wall
+  if (player.x < 0) {
+    player.x = 0;
+  }
 
-// Draw Arc
-ctx.beginPath();
-ctx.fillStyle = "teal";
-ctx.arc(300, 300, 100, 0, Math.PI * 2);
-// ctx.stroke();
-ctx.fill();
+  // Right Wall
+  if (player.x + player.w > canvas.width) {
+    player.x = canvas.width - player.w;
+  }
 
-// radian = (Math.PI) * 2 ----> Full Circle
-// radian = (Math.PI)     ----> Half Circle
-clearCanvas();
+  // Top wall
+  if (player.y < 0) {
+    player.y = 0;
+  }
 
+  // Bottom Wall
+  if (player.y + player.h > canvas.height) {
+    player.y = canvas.height - player.h;
+  }
+}
+// Create Animation
+function update() {
+  clear();
 
-// Face
-ctx.beginPath();
+  drawPlayer();
 
-// ctx.arc(canvas.width / 2, canvas.height / 2, 200, 0, Math.PI * 2);
+  newPos();
 
-var centerX = canvas.width / 2;
-var centerY = canvas.height / 2;
+  requestAnimationFrame(update);
+}
 
-// Draw Head
-ctx.arc(centerX, centerY, 200, 0, Math.PI * 2);
+function moveUp() {
+  player.dy = -player.speed;
+}
 
-// Move to mouth
-ctx.moveTo(centerX + 100, centerY);
+function moveDown() {
+  player.dy = player.speed;
+}
 
-// Draw mouth
-ctx.arc(centerX, centerY, 100, 0, Math.PI);
+function moveRight() {
+  player.dx = player.speed;
+}
 
-// Move to left eye
-ctx.moveTo(centerX - 60, centerY - 80);
+function moveLeft() {
+  player.dx = -player.speed;
+}
 
-// Draw left eye
-ctx.arc(centerX - 80, centerY - 80, 20, 0, Math.PI * 2);
+function keyDown(e) {
+  console.log(e.key);
+  if (e.key === "ArrowRight" || e.key === "Right") {
+    moveRight();
+  } else if (e.key === "ArrowLeft" || e.key === "Left") {
+    moveLeft();
+  } else if (e.key === "ArrowUp" || e.key === "Up") {
+    moveUp();
+  } else if (e.key === "ArrowDown" || e.key === "Down") {
+    moveDown();
+  }
+}
 
-// Move to right eye
-ctx.moveTo(centerX + 100, centerY - 80);
+function keyUp(e) {
+  if (
+    e.key == "Right" ||
+    e.key == "ArrowRight" ||
+    e.key == "Left" ||
+    e.key == "ArrowLeft" ||
+    e.key == "Up" ||
+    e.key == "ArrowUp" ||
+    e.key == "Down" ||
+    e.key == "ArrowDown"
+  ) {
+    player.dx = 0;
+    player.dy = 0;
+  }
+}
 
-// Draw right eye
-ctx.arc(centerX + 80, centerY - 80, 20, 0, Math.PI * 2);
-ctx.stroke();
-*/
+update();
+
+document.addEventListener("keydown", keyDown);
+document.addEventListener("keyup", keyUp);
