@@ -11,7 +11,7 @@
 // const API_URL="";
 // function getApiData(url)
 // {
-//     console.log("Wea are good to call API");
+//     console.log("We are good to call API");
 //     return new Promise((resolve,reject)=>{
 //         //create an instance of XHR
 //         var request = new XMLHttpRequest();
