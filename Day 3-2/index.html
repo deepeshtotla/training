@@ -48,10 +48,13 @@
     <section class="sec2"><main><h1 style="text-align: center;font-size: 20px;margin:0%;top: 0;"><h1>Velorant</h1>
     <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;overflow: hidden; display: flex;text-align: justify; font-size: 100%; padding: 1%;">Valorant is a team-based first-person hero shooter set in the near future.Players play as one of a set of Agents, characters based on several countries and cultures around the world.In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability that requires charging through kills, deaths, orbs, or objectives.Other weapons and ability charges can be purchased using an in-game economic system that awards money based on the outcome of the previous round, any kills the player is responsible for, and any objectives completed.There are automatic and semi-automatic weapons that each have a unique shooting pattern that has to be controlled by the player to be able to shoot accurately.</p>
     </main>
-        <aside class="aside1">
-        <div class="maps" style="height:80px;text-align: center;background-image: url(./map.jpg);background-size: cover;border-radius: 10%;margin-right: 1%;"></div>
+        <aside class="aside1" id="asd1">
+            <!-- <img src="./map.jpg" alt="Image" id="map1">
+            <img src="./map1.png" alt="Image" id="map2">
+            <img src="./map2.png" alt="Image" id="map3"> -->
+        <!-- <div class="maps" style="height:80px;text-align: center;background-image: url(./map.jpg);background-size: cover;border-radius: 10%;margin-right: 1%;"></div>
         <div class="maps" style="height:80px;text-align: center;background-image: url(./map1.png);background-size: cover;border-radius: 10%;margin-right: 1%;"></div>
-        <div class="maps" style="height:80px;text-align: center;background-image: url(./map2.png);background-size: cover;border-radius: 10%;margin-right: 1%;"></div>
+        <div class="maps" style="height:80px;text-align: center;background-image: url(./map2.png);background-size: cover;border-radius: 10%;margin-right: 1%;"></div> -->
         </h1>
             
         </aside></section>
@@ -97,27 +100,39 @@
             </ul>
         </div>
     </div>
-    <!-- <footer>Copyright &copy; 2020 All Rights Reserved by Beta-Labs</footer> -->
-    <!-- <script>
-        var text=document.createElement('p');   
-        text.innerHTML="aenjflsefjlrflkdrnjklgjeklrglkdrg";
-           p.innerText="hello HIII";
-           document.getElementsByClassName('aside1').appendChild(text);
-        setInterval(()=>{
-           var random=Math.random()*3;
-           
-           switch(random)
-           {
-            case 1:
-                var img=document.createElement('img');
-                img.src="./map.jpg";
-                 document.getElementsByClassName('aside1').appendChild(img);
-                break;
-            case 2:break;
-            case 3:break;
-            default:break;
-           }
-        },3000);
-    </script> -->
+   <script>
+    
+    var ct=document.getElementById("asd1");
+    // ct.style.backgroundImage = "url(./map.jpg)";
+    window.onload=setInterval(dis,3000);
+
+    function dis(){
+        
+        setTimeout(m1,1000);
+        delay(1000);
+        setTimeout(m2,200);
+        setTimeout(m3,500);
+
+    //     var random = Math.floor(Math.random()*3);
+    //    console.log(random);
+    //     switch(random)
+    //     {
+    //         case 0:ct.style.backgroundImage = "url(./map.jpg)";break;
+    //         case 1:ct.style.backgroundImage = "url(./map1.png)";break;
+    //         case 2:ct.style.backgroundImage = "url(./map2.png)";break;
+    //         default:ct.style.backgroundImage = "url(./map2.png)";break;
+    //     }
+    }
+    function m1(){
+        ct.style.backgroundImage = "url(./map.jpg)";
+    }
+    function m2(){
+        ct.style.backgroundImage = "url(./map1.png)";
+    }
+    function m3(){
+        ct.style.backgroundImage = "url(./map2.png)";
+    }
+    // console.log(ct);    
+   </script>
 </body>
 </html>

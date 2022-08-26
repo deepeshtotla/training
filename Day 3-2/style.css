@@ -140,10 +140,10 @@ aside
 {
     width: 50%;
     height: 300px;
-    display: flex; 
+    /* display: flex; 
     justify-content: space-evenly;
-    flex-direction: column;
-    /* background-color: #f8f4f4; */
+    flex-direction: column; */
+    background-color: #f8f4f4;
     margin-right: 2%;
 }
 
