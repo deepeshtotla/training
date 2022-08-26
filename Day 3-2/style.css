@@ -7,7 +7,6 @@ body{
     background-color:#080000;
     background-image: url(./head.jpg);
     background-size: cover;
-    
 }
 h1
 {
@@ -91,9 +90,9 @@ main
     margin-left: 1%;
     width: 50%;
     height: 300px;
-    border: solid;
+    /* border: solid; */
     border-radius: 10%;
-    background-color: cornsilk;
+    /* background-color: rgba(253, 252, 252, 0.5); */
     margin-right: 2%;
     overflow: hidden;
     
@@ -136,8 +135,8 @@ background-color: wheat;
     background-color: rgb(181, 235, 210);
     text-align: center;
     font-style: italic;
-    font-size: 20px;
-    height: 200px;
+    font-size: 110%;
+    height: 200%;
     width: 20%
     
 }
