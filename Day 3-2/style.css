@@ -26,11 +26,15 @@ header
   background-image: url(./head.jpg);
   background-size: cover;
 }
-
+#img1
+{
+    width: 100%;
+    height: 15vh;
+}
 .navi
 {
     font-style: italic;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     display: flex;
     justify-content: space-evenly;
 
@@ -39,6 +43,7 @@ header
 {
     border-radius: 20%;
     border-color: black;
+    color: red;
 }
 .a1:hover
 {
