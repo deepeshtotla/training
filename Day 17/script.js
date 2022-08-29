@@ -10,7 +10,8 @@ var coinSound,jumpSound;
 var b=0;
 var c=0;
 var obs,obsImage;
-var dead;
+var dead,de;
+var deadSound;
 //Load Assets
 function preload(){
 
@@ -30,6 +31,8 @@ function preload(){
      obsImage = loadAnimation("images/mush1.png","images/mush2.png","images/mush3.png","images/mush4.png","images/mush5.png");
     
      dead = loadImage("images/dead.png");
+
+     deadSound = loadSound("sounds/dieSound.mp3");
     }
 
 //create basic skeleton with their required credentials
@@ -40,6 +43,7 @@ function setup(){
 
     //function to create objects
     bg=createSprite(600, 300, 150, 50);
+
 
     //add images on object
     bg.addImage(bgImage);
@@ -116,10 +120,17 @@ function draw(){
         var temp = obsGroup.get(i);
         if(mario.isTouching(temp)){
        // coinSound.play(); 
+       de=createSprite(200,530);
+       de.addImage(dead);
+       de.scale = .4;
+       
         temp.destroy();
 
         //points++;
-        temp=null;}
+        temp=null;
+        mario.destroy();
+        deadSound.play();
+    noLoop();}
     }
 
 
