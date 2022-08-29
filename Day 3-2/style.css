@@ -185,7 +185,25 @@ border: 1px solid red;
 .dd:hover
 {
     box-shadow: 5px 5px 5px rgb(9, 9, 9);
+    /* transition-delay: 1s; */
+    /* transform: rotate(-20deg); */
+    animation: r1 3s linear;
+    /* transform: rotate(20deg); */
+    /* transform: rotate(); */
     /* background-color: rgb(232, 112, 112); */
+}
+@keyframes r1 {
+    33%{
+        transform: rotate(20deg);
+    }
+    66%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+    
 }
 .p1
 {
