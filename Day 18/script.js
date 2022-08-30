@@ -194,7 +194,7 @@ function draw() {
 function generateBricks() {
   if (frameCount % 70 === 0) {
     var brick = createSprite(1200, 120, 40, 10);
-    brick.y = random(50, 450);
+    brick.y = random(400, 450);
     brick.addImage(brickImage);
     brick.scale = 0.5;
     brick.velocityX = -5;
@@ -211,7 +211,7 @@ function generateCoins() {
     coin.y = Math.round(random(80, 350));
     coin.addAnimation("coin", coinImage);
     coin.scale = 0.1;
-    coin.velocityX = -7;
+    coin.velocityX = -6;
 
     coin.lifetime = 500;
 
